@@ -1,0 +1,9 @@
+@keyframes moveArrow {
+    0% {
+        transform: translate(-50%, 0);
+    }
+    
+    75% {
+        transform: translate(-50%, 1em);
+    }
+  }

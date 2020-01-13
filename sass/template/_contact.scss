@@ -1,0 +1,85 @@
+
+form{
+   .formCont, .formCheckBox{
+      position: relative;
+      margin-top:1em;
+   }
+   input[type="text"],
+   input[type="email"],
+   input[type="url"],
+   input[type="password"],
+   input[type="search"],
+   input[type="number"],
+   input[type="tel"],
+   input[type="range"],
+   input[type="date"],
+   input[type="month"],
+   input[type="week"],
+   input[type="time"],
+   input[type="datetime"],
+   input[type="datetime-local"],
+   input[type="color"],
+   textarea {
+      -webkit-backface-visibility: hidden;
+      background: $white;
+      border:none;
+      border-bottom: solid 1px $gray;
+      box-sizing: border-box;
+      outline: none;
+      -webkit-appearance: none;
+      outline-offset: 0;
+      border-radius: 0;
+      margin-top:1em;
+      width:100%;
+      
+      + label{
+         position:absolute;
+         top:1em;
+         left:1em;
+         color:$gray;
+         opacity: 0;
+      }
+      &:focus {
+         border-color: $gray; 
+         transition: all .4s;
+         + label{
+            transform: translate(-2em,-1.25em) scale(.8);
+            opacity: 1;
+            transition: transform .4s;
+         }
+         &::placeholder{
+            opacity:0;
+         }
+      }
+      &::placeholder{
+         opacity:1;
+      }
+   }
+   .formCheckBox{
+       font-size:.7rem;
+   }
+   .formButton{
+       margin:1em;
+       text-align: center;
+   }
+
+  .contResponse{
+     opacity: 0;
+  }
+  &.response{
+     .contResponse{
+        margin:2em 0;
+        opacity: 1;
+        transition-delay: 1s;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: ease;
+     }
+     *:not(.contResponse){
+        opacity: 0;
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: ease;
+     }
+  }
+}
