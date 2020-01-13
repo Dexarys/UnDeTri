@@ -1,13 +1,18 @@
-=== DEPENDANCE
+DEPENDANCE
+===
 
 https://www.mongodb.com/download-center/community
 
 https://nodejs.org/en/download/
 
-== Pour installer le générateur
-npm install -g yo
+Pour installer le générateur
+===
 
-npm install -g generator-keystone
+`npm install -g yo`
 
-== Pour démarrer
-node keystone
+`npm install -g generator-keystone`
+
+Pour démarrer
+===
+
+`node keystone`
